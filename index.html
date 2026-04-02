@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДонорТул — Спаси жизнь сегодня</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    </head>
+<body>
+
+    <main class="container">
+        <nav>
+            <ul>
+                <li><strong style="font-size: 1.5rem;">🩸 Донор<span style="color: var(--primary);">Тул</span></strong></li>
+            </ul>
+            <ul>
+                <li><a href="#how" class="secondary">Подготовка</a></li>
+                <li><a href="#organizations" class="secondary">Организации</a></li>
+                <li><a href="#why" role="button">Почему важно?</a></li>
+            </ul>
+        </nav>
+
+        <header style="text-align: center; padding: 5rem 0;" class="reveal">
+            <span class="status-badge">Срочно требуются все группы крови</span>
+            <h1 class="hero-title">Твоя кровь — <br>чья-то надежда</h1>
+            <p style="font-size: 1.25rem; color: var(--muted-color); max-width: 600px; margin: 0 auto;">
+                Всего 40 минут вашего времени могут подарить кому-то годы жизни. 
+                Это безопасно, почетно и жизненно важно.
+            </p>
+        </header>
+
+        <section id="why" class="reveal">
+            <article>
+                <div style="text-align: center;">
+                    <h2 style="margin-bottom: 1rem;">Почему это важно?</h2>
+                    <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+                        Сдача крови — это акт милосердия, который спасает жизни. Каждая донация может помочь до 3 человек: пациентам с травмами, онкологическими заболеваниями, во время операций и родов. 
+                        В России ежегодно требуется более 1,5 млн литров крови, но только 1% населения регулярно сдает кровь. 
+                        Ваша кровь может стать надеждой для кого-то в беде — станьте героем сегодня!
+                    </p>
+                    <p style="font-size: 1rem; color: var(--muted-color); margin-top: 1rem;">
+                        <strong>Факты:</strong> Одна донация крови может спасти жизнь ребенка с лейкемией или помочь при аварии. Доноры получают бесплатное обследование и снижают риск сердечных заболеваний.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section id="how" style="padding-top: 4rem;" class="reveal">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Подготовка к донации</h2>
+            <div class="grid">
+                <article>
+                    <header><h4 style="color: #d32f2f; margin: 0;">⚠️ Ограничения</h4></header>
+                    <p>За 48 часов исключите:</p>
+                    <ul>
+                        <li>Алкоголь и жирную пищу</li>
+                        <li>Лекарства (аспирин, анальгетики)</li>
+                        <li>Молочные продукты и яйца</li>
+                    </ul>
+                </article>
+                <article>
+                    <header><h4 style="color: #388e3c; margin: 0;">✨ В день сдачи</h4></header>
+                    <ul>
+                        <li>Легкий завтрак (сладкий чай, каша)</li>
+                        <li>Пейте больше чистой воды</li>
+                        <li>Возьмите <strong>оригинал паспорта</strong></li>
+                        <li>Хорошее настроение обязательно!</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="organizations" style="padding-top: 4rem;" class="reveal">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Организации в Туле</h2>
+            
+            <div class="slider-wrapper">
+                <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+                <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <article>
+                                <header><h4 style="margin-bottom: 0;">🏥 Областная станция переливания</h4></header>
+                                <p>📍 <strong>Адрес:</strong> ул. Ф. Энгельса, д. 56</p>
+                                <p>⏰ <strong>Время работы:</strong> Пн–Пт 08:00–13:00</p>
+                                <a href="tel:+74872367206" role="button" class="outline" style="width: 100%; margin-bottom: 1rem;">📞 +7 (4872) 36-72-06</a>
+                                <div class="map-widget">
+                                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234567890abcdef&source=constructor" width="100%" height="200" frameborder="0" style="border-radius: var(--border-radius);"></iframe>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="slide">
+                            <article>
+                                <header><h4 style="margin-bottom: 0;">🏥 Городская клиническая №1</h4></header>
+                                <p>📍 <strong>Адрес:</strong> ул. Болдина, д. 123</p>
+                                <p>⏰ <strong>Время работы:</strong> Пн–Пт 09:00–14:00</p>
+                                <a href="tel:+74872251000" role="button" class="outline" style="width: 100%; margin-bottom: 1rem;">📞 +7 (4872) 25-10-00</a>
+                                <div class="map-widget">
+                                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aabcdef1234567890&source=constructor" width="100%" height="200" frameborder="0" style="border-radius: var(--border-radius);"></iframe>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="slide">
+                            <article>
+                                <header><h4 style="margin-bottom: 0;">🏥 Областная клиническая больница</h4></header>
+                                <p>📍 <strong>Адрес:</strong> ул. Л. Толстого, д. 57</p>
+                                <p>⏰ <strong>Время работы:</strong> Пн–Сб 08:00–12:00</p>
+                                <a href="tel:+74872310000" role="button" class="outline" style="width: 100%; margin-bottom: 1rem;">📞 +7 (4872) 31-00-00</a>
+                                <div class="map-widget">
+                                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0987654321fedcba&source=constructor" width="100%" height="200" frameborder="0" style="border-radius: var(--border-radius);"></iframe>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-dots"></div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="reveal" style="padding: 4rem 0;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Отзывы доноров</h2>
+            <div class="grid" style="gap: 1.5rem;">
+                <article>
+                    <p style="font-weight: 600;">“После первого раза почувствовал себя легче, а главное — знал, что помог.”</p>
+                    <div class="testimonial-photos">
+                        <a href="#" target="_blank"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23e0e0e0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='10' fill='%236b6b6b'%3EФото%3C/text%3E%3C/svg%3E" alt="Фото донора Иван"></a>
+                        <a href="#" target="_blank"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23e0e0e0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='10' fill='%236b6b6b'%3EФото%3C/text%3E%3C/svg%3E" alt="Фото донора Иван"></a>
+                    </div>
+                    <p style="font-size: 0.95rem; color: #555; margin: 0.5rem 0 0;">Где сдавал: Областная станция переливания, Тула</p>
+                    <small>— Иван П., 29 лет</small>
+                </article>
+                <article>
+                    <p style="font-weight: 600;">“Понимаешь, что идешь не ради себя, а ради того, чтобы кому-то помочь.”</p>
+                    <div class="testimonial-photos">
+                        <a href="#" target="_blank"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23e0e0e0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='10' fill='%236b6b6b'%3EФото%3C/text%3E%3C/svg%3E" alt="Фото донора Мария"></a>
+                        <a href="#" target="_blank"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23e0e0e0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='10' fill='%236b6b6b'%3EФото%3C/text%3E%3C/svg%3E" alt="Фото донора Мария"></a>
+                    </div>
+                    <p style="font-size: 0.95rem; color: #555; margin: 0.5rem 0 0;">Где сдавал: Городская клиническая №1, Тула</p>
+                    <small>— Мария С., 34 года</small>
+                </article>
+                <article>
+                    <p style="font-weight: 600;">“Администраторы в центре очень доброжелательные, максимальный комфорт.”</p>
+                    <div class="testimonial-photos">
+                        <a href="#" target="_blank"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23e0e0e0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='10' fill='%236b6b6b'%3EФото%3C/text%3E%3C/svg%3E" alt="Фото донора Олег"></a>
+                        <a href="#" target="_blank"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23e0e0e0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='10' fill='%236b6b6b'%3EФото%3C/text%3E%3C/svg%3E" alt="Фото донора Олег"></a>
+                    </div>
+                    <small>— Олег К., 41 год</small>
+                </article>
+            </div>
+        </section>
+
+        <section id="feedback" class="reveal" style="padding: 4rem 0;">
+            <h2 style="text-align: center; margin-bottom: 1.5rem;">Оставить отзыв или предложение</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--muted-color);">Ваше мнение поможет нам добавить новые донорские пункты и улучшить сервис для всех.</p>
+            <form id="feedbackForm" class="grid" style="gap: 1rem; max-width: 760px; margin: 0 auto;">
+                <div>
+                    <label for="name">Имя</label>
+                    <input id="name" name="name" type="text" placeholder="Ваше имя" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="example@mail.ru" required>
+                </div>
+                <div>
+                    <label for="location">Где сдавали</label>
+                    <input id="location" name="location" type="text" placeholder="Укажите центр" required>
+                </div>
+                <div style="grid-column: 1 / -1;">
+                    <label for="suggestion">Предложение/Отзыв</label>
+                    <textarea id="suggestion" name="suggestion" rows="4" placeholder="Расскажите о своем опыте или предложении" required></textarea>
+                </div>
+                <div style="grid-column: 1 / -1; text-align: center; margin-top: 1rem;">
+                    <button type="submit" class="secondary">Отправить отзыв</button>
+                </div>
+                <div id="feedbackResult" style="display: none; grid-column: 1 / -1; text-align: center; padding: 1rem; border-radius: 8px; background: #e8f7e9; color: #116611;">Спасибо! Ваш отзыв отправлен.</div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="container" style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <small>© 2026 ДонорТул. Сделано с заботой о людях.</small>
+            <small>Имеются противопоказания. Проконсультируйтесь со специалистом.</small>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. АНИМАЦИЯ ПОЯВЛЕНИЯ ПРИ СКРОЛЛЕ ---
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Запускаем сразу при загрузке страницы
+
+
+        // --- 2. КНОПКА КОПИРОВАНИЯ АДРЕСА ---
+        function copyAddress() {
+            navigator.clipboard.writeText("Тула, ул. Ф. Энгельса, д. 56");
+            const btn = document.getElementById('copyBtn');
+            
+            if (btn) {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = "✅ Адрес скопирован!";
+                btn.classList.remove('outline', 'secondary');
+                btn.style.backgroundColor = "#388e3c";
+                btn.style.color = "white";
+                btn.style.borderColor = "#388e3c";
+
+                // Возвращаем кнопку в исходное состояние через 2 секунды
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.add('outline', 'secondary');
+                    btn.style.backgroundColor = "";
+                    btn.style.color = "";
+                    btn.style.borderColor = "";
+                }, 2000);
+            }
+        }
+
+
+        // --- 3. ЛОГИКА СЛАЙДЕРА ---
+        // Оборачиваем в DOMContentLoaded, чтобы скрипт точно дождался загрузки HTML
+        document.addEventListener('DOMContentLoaded', () => {
+            const slidesContainer = document.querySelector('.slides');
+            const slides = document.querySelectorAll('.slide');
+            const dotsContainer = document.querySelector('.slider-dots');
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+            
+            // Если слайдера нет на странице, скрипт просто остановится и не выдаст ошибку
+            if (!slidesContainer || slides.length === 0) return; 
+
+            const slidesCount = slides.length;
+            let currentSlide = 0;
+
+            // Динамически создаем точки (пагинацию) под слайдером
+            for (let i = 0; i < slidesCount; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active'); // Делаем первую точку активной
+                dot.addEventListener('click', () => window.goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+
+            const dots = document.querySelectorAll('.dot');
+
+            // Функция обновления внешнего вида слайдера
+            function updateSlider() {
+                // Сдвигаем ленту со слайдами
+                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                // Перекрашиваем активную точку
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            // Делаем функции глобальными, чтобы кнопки в HTML (onclick) могли их вызывать
+            window.changeSlide = function(direction) {
+                currentSlide = (currentSlide + direction + slidesCount) % slidesCount;
+                updateSlider();
+            };
+
+            window.goToSlide = function(index) {
+                currentSlide = index;
+                updateSlider();
+            };
+
+            // Запускаем автоматическое перелистывание каждые 5 секунд
+            let autoSlideTimer = setInterval(() => window.changeSlide(1), 5000);
+            
+            // Если мышка наведена на слайдер — ставим на паузу, чтобы человек успел прочитать
+            if (sliderWrapper) {
+                sliderWrapper.addEventListener('mouseenter', () => clearInterval(autoSlideTimer));
+                sliderWrapper.addEventListener('mouseleave', () => {
+                    autoSlideTimer = setInterval(() => window.changeSlide(1), 5000);
+                });
+            }
+        });
+
+        // --- 4. ФОРМА ОТЗЫВА ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('feedbackForm');
+            const result = document.getElementById('feedbackResult');
+
+            if (!form || !result) return;
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                const name = form.name.value.trim();
+                const email = form.email.value.trim();
+                const location = form.location.value.trim();
+                const suggestion = form.suggestion.value.trim();
+
+                if (!name || !email || !location || !suggestion) {
+                    alert('Пожалуйста, заполните все поля.');
+                    return;
+                }
+
+                // В реальном приложении здесь отправка на сервер.
+                result.style.display = 'block';
+                result.innerText = 'Спасибо, ' + name + '! Ваш отзыв принят. Мы обязательно рассмотрим предложение.';
+
+                form.reset();
+
+                setTimeout(() => {
+                    result.style.display = 'none';
+                }, 4500);
+            });
+        });
+    </script>
+</body>
+</html>

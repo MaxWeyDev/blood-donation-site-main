@@ -1,0 +1,246 @@
+:root {
+    --primary: #e63946;
+    --primary-hover: #c1121f;
+    --font-family: 'Inter', sans-serif;
+    --glass: rgba(255, 255, 255, 0.8);
+    --blur: blur(10px);
+}
+
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* Эффект стекла для карточек */
+article {
+    background: var(--glass) !important;
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07) !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(230, 57, 70, 0.15) !important;
+}
+
+/* Геро-секция с градиентным текстом */
+.hero-title {
+    font-weight: 800;
+    font-size: 3rem;
+    letter-spacing: -0.05em;
+    background: linear-gradient(90deg, #b71c1c, #e63946);
+    /* Свойства для обрезки фона по тексту */
+    -webkit-background-clip: text; /* Для Chrome, Safari и Edge */
+    background-clip: text;         /* Стандартное свойство для совместимости */
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+/* Индикатор подготовки */
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background: #ffe3e3;
+    color: #e63946;
+    text-transform: uppercase;
+}
+
+/* Анимации появления */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Кастомная кнопка копирования */
+#copyBtn {
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --glass: rgba(30, 34, 39, 0.8);
+    }
+    body { background: #111927; }
+    .hero-title { background: linear-gradient(90deg, #ff4d4d, #ff9999); -webkit-background-clip: text; background-clip: text; }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+/* ==================== СЛАЙДЕР ==================== */
+.slider-wrapper {
+    position: relative;
+    max-width: 700px; /* Делаем чуть уже, чтобы смотрелось элегантнее */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.slider {
+    overflow: hidden;
+    border-radius: 16px;
+    /* Больше никаких min-height! */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Дорогая плавная анимация */
+    width: 100%;
+}
+
+.slide {
+    flex: 0 0 100%; /* Каждый слайд занимает ровно 100% ширины */
+    width: 100%;
+    padding: 10px; /* Место для тени */
+    box-sizing: border-box;
+}
+
+.slide article {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Прижимаем карту к низу, если текста мало */
+.slide article .map-widget {
+    margin-top: auto; 
+}
+
+/* Кнопки навигации */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+.slider-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-btn.prev { left: -20px; }
+.slider-btn.next { right: -20px; }
+
+/* Точки внизу слайдера */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary);
+    transform: scale(1.2);
+}
+
+/* На мобильных прячем кнопки внутрь, чтобы не обрезались */
+.testimonial-photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.testimonial-photos img {
+    width: 68px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .slider-btn.prev { left: 10px; }
+    .slider-btn.next { right: 10px; }
+}
+
+/* Стиль формы отзывов */
+#feedback form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+
+#feedback form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#feedback form input,
+#feedback form textarea,
+#feedback form select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#feedback form textarea {
+    min-height: 110px;
+}
+
+#feedback form label {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    #feedback form {
+        grid-template-columns: 1fr;
+    }
+    #feedback form div[style*="grid-column"] {
+        grid-column: 1 / -1;
+    }
+}
