@@ -704,6 +704,22 @@ article:hover {
     cursor: pointer;
 }
 
+.donor-photo {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 14px !important;
+    border: 2px solid rgba(230,57,70,0.18) !important;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    display: block;
+    cursor: default;
+}
+
+.centered-photo {
+    object-position: center;
+}
+
 /* ==================== FORM ==================== */
 #feedbackForm { max-width: 760px; margin: 0 auto; }
 
